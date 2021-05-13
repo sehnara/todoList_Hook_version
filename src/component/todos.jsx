@@ -13,7 +13,11 @@ const Todos = (props) => {
                     id = {todo.id}
                     title = {todo.title}    
                     conf = {todo.confirmed}
+                    show = {todo.isShow}
+
                     onConf = {props.onConf}
+                    onShow = {props.onShow}
+                    onDel = {props.onDel}
                     >
                 </Todo>)
             }          

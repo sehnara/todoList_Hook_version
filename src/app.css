@@ -66,3 +66,38 @@
   margin-left: 1.1em;
   color: rgb(100, 102, 102);
 }
+.button-delete {
+  font-size: 1.4em;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: rgb(184, 185, 186);
+}
+.button-delete:hover {
+  color: orangered;
+  transform: scale(1.2);
+}
+
+/* ------------------------------------------------ */
+
+.button-input {
+  position: sticky;
+  bottom: 50px;
+  left: 575px;
+
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+
+  font-size: 50px;
+  color: white;
+
+  border: none;
+  background-color: rgb(255, 212, 23);
+  cursor: pointer;
+
+  z-index: 10;
+}
+.button-input:hover {
+  background-color: rgb(252, 221, 139);
+}
