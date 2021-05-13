@@ -52,6 +52,7 @@
   /* margin-bottom: 0; */
   overflow: scroll;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 .todo-confirm {
   border-radius: 50%;
@@ -64,7 +65,11 @@
 }
 .todo-list {
   display: flex;
+  justify-content: space-between;
   margin-bottom: 1.4em;
+}
+.todo-list-container {
+  display: flex;
 }
 
 .todo-title {
@@ -78,6 +83,8 @@
   border: none;
   cursor: pointer;
   color: rgb(184, 185, 186);
+
+  text-align: right;
 }
 .button-delete:hover {
   color: orangered;

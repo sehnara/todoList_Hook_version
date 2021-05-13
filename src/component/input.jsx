@@ -3,7 +3,7 @@ import React, { useRef } from 'react';
 const Input = (props) => {
     // 1. variable
     const inputRef = useRef();    
-    const isInput = props.showInput;
+    const isInput = props.showInput;   
 
     const style ={
         transform : 'rotate(45deg)',

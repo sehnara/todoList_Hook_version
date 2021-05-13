@@ -36,9 +36,10 @@ const Todo = (props) => {
                 className="todo-list"
                 onMouseEnter={()=>handleShow(true)}
                 onMouseLeave={()=>handleShow(false)}
-            >
-                <button className="todo-confirm" onClick={handleConf} style={btn_style}><i className="fas fa-check"></i></button>
-                <span className="todo-title" style={text_style}>{title}</span>
+            >   <div className="todo-list-container">
+                    <button className="todo-confirm" onClick={handleConf} style={btn_style}><i className="fas fa-check"></i></button>
+                    <span className="todo-title" style={text_style}>{title}</span>
+                </div>
                 {
                     show&& 
                     <button className="button-delete" onClick={handleDelete}><i className="fas fa-trash"></i></button>
@@ -52,8 +53,10 @@ const Todo = (props) => {
                 onMouseEnter={()=>handleShow(true)}
                 onMouseLeave={()=>handleShow(false)}
             >
-                <button className="todo-confirm" onClick={handleConf}></button>
-                <span className="todo-title">{title}</span>
+                <div className="todo-list-container">
+                    <button className="todo-confirm" onClick={handleConf}></button>
+                    <span className="todo-title">{title}</span>
+                </div>
                 {
                     show&& 
                     <button className="button-delete" onClick={handleDelete}><i className="fas fa-trash"></i></button>
