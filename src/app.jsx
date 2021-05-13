@@ -22,9 +22,15 @@ function App() {
                                 {...todo, confirmed : !todo.confirmed}:todo));    
   };  
 
+  const leftCount = toDos.length-toDos.filter((todo)=>{
+    return todo.confirmed === true;
+  }).length;
+
   return (
     <div className="container">
-     <Nav />
+     <Nav 
+      leftCount = {leftCount}     
+      />
      <Todos
       toDos = {toDos}
       onConf = {handleConf}
