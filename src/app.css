@@ -1,3 +1,7 @@
+* {
+  list-style: none;
+}
+
 /* container */
 
 .container {
@@ -34,8 +38,31 @@
   margin-top: 2em;
   margin-bottom: 0;
 
-  color: rgb(108, 217, 182);
+  color: rgb(255, 212, 23);
   font-weight: bold;
 }
 
 /* ------------------------------------------------ */
+/* list */
+.todo-lists {
+  padding: 2em;
+}
+.todo-confirm {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+
+  border: 0.5px solid gray;
+  background-color: transparent;
+  cursor: pointer;
+}
+.todo-list {
+  display: flex;
+  margin-bottom: 1.4em;
+}
+
+.todo-title {
+  font-size: 1.4em;
+  margin-left: 1.1em;
+  color: rgb(100, 102, 102);
+}
