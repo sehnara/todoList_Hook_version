@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useRef, useState } from 'react';
 import './app.css';
 import Input from './component/input';
 import Nav from './component/nav';
@@ -15,6 +15,7 @@ function App() {
       {id : 4, title : '전속력으로 달리기', confirmed: false, isShow : false}
     ]
   );
+  const [showInput, setShowInput]=useState(false);
 
   // method  
   const handleConf = (id) =>{
@@ -38,7 +39,25 @@ function App() {
       return todo.id !== id;
     }))
   }
-  
+  const handleShowInput = ()=>{
+    setShowInput(showInput=>!showInput);
+  }
+
+  const newId = useRef(5);
+  const handleInputToDo=(todo)=>{
+      const toDoObj = {
+      id:newId.current,
+      title : todo,
+      confirmed : false,
+      isShow : false
+    }
+    const newTodos = [...toDos];
+    newTodos.push(toDoObj);
+    newId.current+=1;
+    
+    console.log(toDoObj);
+    setTodos(toDos=>newTodos);
+  }  
 
   return (
     <>
@@ -50,10 +69,14 @@ function App() {
         toDos = {toDos}
         onConf = {handleConf}
         onShow = {handleShow}
-        onDel = {handleDelete}
+        onDel = {handleDelete}        
       />      
-      </div>
-      <Input/>
+      <Input
+        showInput = {showInput}
+        onShowInput = {handleShowInput}
+        onInputToDo={handleInputToDo}
+      />
+      </div>      
     </>
   );
 }

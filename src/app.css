@@ -46,6 +46,12 @@
 /* list */
 .todo-lists {
   padding: 2em;
+  /* border: 1px solid black; */
+  height: 300px;
+
+  /* margin-bottom: 0; */
+  overflow: scroll;
+  overflow-x: hidden;
 }
 .todo-confirm {
   border-radius: 50%;
@@ -81,9 +87,9 @@
 /* ------------------------------------------------ */
 
 .button-input {
-  position: sticky;
-  bottom: 50px;
-  left: 575px;
+  position: relative;
+  bottom: -150px;
+  left: 190px;
 
   width: 100px;
   height: 100px;
@@ -100,4 +106,21 @@
 }
 .button-input:hover {
   background-color: rgb(252, 221, 139);
+}
+
+.input-container {
+  position: relative;
+  bottom: 76px;
+  background-color: rgb(245, 245, 245);
+  height: 172px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  text-align: center;
+}
+
+.input-todo {
+  margin-top: 50px;
+  height: 40px;
+  width: 400px;
+  font-size: 17px;
 }
