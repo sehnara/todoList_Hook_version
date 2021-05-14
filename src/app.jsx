@@ -42,18 +42,18 @@ function App() {
   const handleShowInput = ()=>{
     setShowInput(showInput=>!showInput);
   }
-
-  const newId = useRef(5);
+ 
+  const newId = useRef(5); //------------
   const handleInputToDo=(todo)=>{
       const toDoObj = {
-      id:newId.current,
+      id:newId.current, //--------------
       title : todo,
       confirmed : false,
       isShow : false
     }
     const newTodos = [...toDos];
     newTodos.push(toDoObj);
-    newId.current+=1;
+    newId.current+=1;//----------------
     
     console.log(toDoObj);
     setTodos(toDos=>newTodos);
